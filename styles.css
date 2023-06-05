@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  list-style: none;
+  font-style: none;
+}
+
+:root {
+  --color-principal: #33aef1;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+header {
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: none;
+  gap: 1.5rem;
+}
+
+li {
+  list-style: none;
+  font-weight: 600;
+  color: #081128;
+}
+
+a {
+  text-decoration: none;
+  color: #081128;
+}
+
+header button {
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--color-principal);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+header button:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in;
+  background-color: #005fc4ab;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -webkit-transition: 1s ease-in;
+  -moz-transition: 1s ease-in;
+  -ms-transition: 1s ease-in;
+  -o-transition: 1s ease-in;
+}
+
+/* Contenido principal */
+
+main {
+  position: relative;
+  background: linear-gradient(60deg, #543ab7 0%, rgba(0, 172, 193, 1) 100%);
+  color: #fff;
+  height: 100%;
+}
+
+.sections {
+  width: 100%;
+  padding: 40px 20px;
+  margin: 0 auto;
+  
+}
+
+.sections div {
+  max-width: 700px;
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+  padding: 10px 25px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sections .buttons {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sections .buttons button {
+  padding: 0.4rem;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 100px;
+  color: #371a45;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  max-width: 200px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.sections .buttons button:hover {
+  border: 1px solid var(--color-principal);
+  transition: 0.4s ease-in;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  -webkit-transition: 0.4s ease-in;
+  -moz-transition: 0.4s ease-in;
+  -ms-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.sections .img-fnd {
+  width: 60%;
+  margin-inline: auto;
+  object-fit: cover;
+  display: none;
+}
+
+.contenedor-parallax {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+p {
+  font-size: 18px;
+}
+
+/* animación */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)
+    infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+    -webkit-transform: translate3d(85px, 0, 0);
+    -moz-transform: translate3d(85px, 0, 0);
+    -ms-transform: translate3d(85px, 0, 0);
+    -o-transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (min-width: 760px) {
+    .sections .img-fnd {
+        width: auto;
+        display: flex;
+      }
+}
+
+@media (min-width: 960px) {
+  header nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .sections {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    padding: 40px 0px;
+  }
+
+  .sections .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+
+  h1 {
+    font-size: 52px;
+    font-weight: 700;
+  }
+  .sections div {
+    text-align: left;
+    margin: 0;
+  }
+}
